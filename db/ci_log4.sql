@@ -1,0 +1,140 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 17, 2018 at 01:46 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 5.6.36
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ci_log4`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('0c36a0c7058153020bab5cc9585b4701eded5bc5', '::1', 1531745142, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313734353134323b),
+('0c7ec3cd72b8a14bc5acd93c3d1335707a12e0d4', '::1', 1531716833, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731363833333b),
+('263f708fa90f211092be13030a8706c58fc2e28e', '::1', 1531660742, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313636303437353b),
+('2aec56487c20d121dc5ceca66aae523be485eb2d', '::1', 1531717612, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731373537333b),
+('4b233d11d3c53d2066a60370903b5c6ab7fab9eb', '::1', 1531750810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313735303831303b),
+('567e592733003270cd7de807ec76396334007201', '::1', 1531811529, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313831313435343b),
+('686af77a6f5a267e5e48bc485f8cad5e2d4abe31', '::1', 1531709462, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313730393433393b),
+('6bc148f7df45939fa63d21f967092e36875bfe55', '::1', 1531717960, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731373936303b),
+('7545dd99984094a6699662727033db7e6308271f', '::1', 1531657317, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313635373331363b),
+('757b4614b20f589e6ef26bc465a062e78db1fab7', '::1', 1531657148, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313635363939393b),
+('8cd925c715e42d0f40c131bd8a8dbae8a6da1cdf', '::1', 1531745025, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313734343734343b),
+('a1d65fa1d33b73e082d939262d9e7ead1a6ccfb0', '::1', 1531656091, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313635353936313b),
+('a1f19d16ae3f21c53df7e06510d6a1df68d67cc3', '::1', 1531717532, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731373237303b),
+('a3675617d47bed41a983d51161273cc2285e0b08', '::1', 1531656639, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313635363534393b),
+('aa8a5d61a14162d406f2cfb5c5284a0ffdf59c87', '::1', 1531679397, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313637393339373b),
+('b3dc24ab00258087b7496084d6a93cfb0010f254', '::1', 1531732518, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313733323531373b),
+('c22cca7fc61b6406ae7a4cee7fe4c60c1516d27c', '::1', 1531660890, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313636303832333b),
+('e4fb456cf476ca9f8fc02cad379b07b28b7b6e47', '::1', 1531661311, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313636313239363b),
+('eb062f7741318c517bc51dfca47b49519ec48ff4', '::1', 1531739130, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313733393032373b),
+('eb66526c968385f133460bb9c77ad1464e5ea2f7', '::1', 1531748825, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313734383730393b),
+('ecdb5b60b9f34b3415da9eb6cd5f7da733a0af0f', '::1', 1531812745, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313831323734353b),
+('f4d8f6e90c934a1e38a0d62091e9317dbf58d561', '::1', 1531737372, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313733373236393b),
+('fe37430f8a901ec9936b1250ad6c9e613a69ec7e', '::1', 1531826393, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313832363339333b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log`
+--
+
+CREATE TABLE `log` (
+  `timestamp` datetime DEFAULT NULL,
+  `logger` varchar(256) DEFAULT NULL,
+  `level` varchar(32) DEFAULT NULL,
+  `message` varchar(4000) DEFAULT NULL,
+  `thread` int(11) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `line` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `log`
+--
+
+INSERT INTO `log` (`timestamp`, `logger`, `level`, `message`, `thread`, `file`, `line`) VALUES
+('2018-07-17 13:19:53', 'dberror', 'Notice', 'Undefined variable: www, at line no 34 in C:\\xampp\\htdocs\\ci_final_error_log\\application\\controllers\\User.php file', 3200, 'C:\\xampp\\htdocs\\ci_final_error_log\\application\\controllers\\User.php', '34'),
+('2018-07-17 13:19:53', 'dberror', 'User Error', 'Email Already Exists, at line no 42 in C:\\xampp\\htdocs\\ci_final_error_log\\application\\controllers\\User.php file', 3200, 'C:\\xampp\\htdocs\\ci_final_error_log\\application\\controllers\\User.php', '42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `username` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `password` varchar(255) NOT NULL DEFAULT '',
+  `avatar` varchar(255) DEFAULT 'default.jpg',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `is_admin` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `is_confirmed` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ci_sessions`
+--
+ALTER TABLE `ci_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

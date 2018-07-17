@@ -1,0 +1,23 @@
+
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="default" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutHtml" />
+        <!-- <param name="locationInfo" value="true" /> -->
+        <param name="file" value="log.html" />
+        <param name="append" value="true" />
+    </appender>
+
+    <appender name="secundus" class="LoggerAppenderPDO">
+        <param name="dsn" value="mysql:host=localhost;dbname=ci_log4" />
+        <param name="user" value="root" />
+        <param name="password" value="" />
+        <param name="table" value="log" />
+    </appender>
+    <root>
+        <appender_ref ref="default" />
+    </root>
+
+    <logger name="dberror"> 
+        <appender_ref ref="secundus" />
+    </logger>
+</configuration>
